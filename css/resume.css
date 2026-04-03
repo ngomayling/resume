@@ -49,6 +49,54 @@ h2 {
   .list-icons .list-inline-item i:hover {
     color: #135931; }
 
+.list-icons img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.tooltip-item {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  position: absolute;
+  bottom: -10%; /* show text below icons*/
+  left: 50%;
+  transform: translateX(-50%);
+  
+  background-color: #1359319a;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+
+  z-index: 9999; /* VERY IMPORTANT */
+}
+
+.list-inline-item:hover .tooltip-text{
+  visibility: visible;
+  opacity: 1;
+}
+
+.custom-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #929686;
+  transition: 0.2s;
+}
+
+.custom-icon:hover {
+  color: #135931;
+}
+
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 600;
   text-transform: uppercase; }
